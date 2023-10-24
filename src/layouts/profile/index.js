@@ -203,8 +203,9 @@ function Overview() {
               <MDTypography variant="h5" fontWeight="medium">
                   Certifications
               </MDTypography>
+              <SectionCarousel />
             </MDBox>
-            <SectionCarousel />
+            
           </Grid>
         </Grid>
         
