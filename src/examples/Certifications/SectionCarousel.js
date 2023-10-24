@@ -20,23 +20,23 @@ import {
 const items = [
   {
     src: require("assets/images/certificados/policy.png"),
-    altText: "PolicyCenter Specialist",
+    altText: "PolicyCenter Specialist"
   },
   {
     src: require("assets/images/certificados/azure cloud.png"),
-    altText: "Azure cloud",
+    altText: "Azure cloud"
   },
   {
     src: require("assets/images/certificados/azure az104.png"),
-    altText: "Azure AZ104",
+    altText: "Azure AZ104"
   },
   {
     src: require("assets/images/certificados/azure az305.png"),
-    altText: "Azure AZ305",
+    altText: "Azure AZ305"
   },
   {
     src: require("assets/images/certificados/azure fundamentals.png"),
-    altText: "Azure Fundamentals",
+    altText: "Azure Fundamentals"
   },
   {
     src: require("assets/images/certificados/meta-data analytics.png"),
@@ -44,15 +44,15 @@ const items = [
   },
   {
     src: require("assets/images/certificados/michigan-developing ar.png"),
-    altText: "Developing AR",
+    altText: "Developing AR"
   },
   {
     src: require("assets/images/certificados/uc davis spark sql.png"),
-    altText: "Spark SQL",
+    altText: "Spark SQL"
   },
   {
     src: require("assets/images/certificados/uc davis sql.png"),
-    altText: "SQL",
+    altText: "SQL"
   },
 ];
 
