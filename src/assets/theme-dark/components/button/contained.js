@@ -55,7 +55,7 @@ const contained = {
 
   large: {
     minHeight: pxToRem(44),
-    padding: `${pxToRem(12)} ${pxToRem(64)}`,
+    padding: `${pxToRem(2)} ${pxToRem(24)}`,
     fontSize: size.sm,
 
     "& .material-icon, .material-icons-round, svg": {

@@ -49,11 +49,11 @@ export default styled(Badge)(({ theme, ownerState }) => {
     let heightValue = pxToRem(20);
 
     if (sizeProp === "medium") {
-      widthValue = pxToRem(24);
-      heightValue = pxToRem(24);
+      widthValue = pxToRem(4);
+      heightValue = pxToRem(4);
     } else if (sizeProp === "large") {
-      widthValue = pxToRem(32);
-      heightValue = pxToRem(32);
+      widthValue = pxToRem(2);
+      heightValue = pxToRem(2);
     }
 
     return {

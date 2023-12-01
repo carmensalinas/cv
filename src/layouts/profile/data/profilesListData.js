@@ -18,7 +18,7 @@ import java from "assets/images/small-logos/java.png";
 
 export default function data() {
   const Company = ({ image, name }) => (
-    <MDBox display="flex" alignItems="center" lineHeight={1}>
+    <MDBox display= "auto" alignItems="left" lineHeight={1}>
       <MDAvatar src={image} name={name} size="md" />
       <MDTypography variant="button" fontWeight="medium" ml={1} lineHeight={1}>
         {name}
@@ -28,13 +28,13 @@ export default function data() {
 
   return {
     columns: [
-      { Header: "Knowledge", accessor: "companies", width: "45%", align: "left" },
-      { Header: "Level", accessor: "completion", align: "center" },
+      { Header: "Conocimientos", accessor: "companies", width: "15%", align: "left" },
+      { Header: "Nivel", accessor: "completion", align: "left" },
     ],
 
     rows: [
       {
-        companies: <Company image={gw} name="Guidewire Specialist" />,
+        companies: <Company image={gw} name="Guidewire" />,
         completion: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={80} color="info" variant="gradient" label={false} />

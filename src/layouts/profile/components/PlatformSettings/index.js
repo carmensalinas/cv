@@ -16,7 +16,7 @@ function PlatformSettings() {
     <Card sx={{ boxShadow: "none", display: "flex" }}>
       <MDBox p={2} display="flex">
         <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize">
-          Settings [in progress]
+          Ajustes [próximamente]
         </MDTypography>
       </MDBox>
       <MDBox pt={1} pb={2} px={2} lineHeight={1.25}>
@@ -26,7 +26,7 @@ function PlatformSettings() {
           </MDBox>
           <MDBox width="80%" ml={0.5}>
             <MDTypography variant="button" fontWeight="regular" color="text">
-              Dark / Light
+              Oscuro / Claro
             </MDTypography>
           </MDBox>
         </MDBox>
@@ -36,7 +36,7 @@ function PlatformSettings() {
           </MDBox>
           <MDBox width="80%" ml={0.5}>
             <MDTypography variant="button" fontWeight="regular" color="text">
-              US/ES
+              ES/US
             </MDTypography>
           </MDBox>
         </MDBox>

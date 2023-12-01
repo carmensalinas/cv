@@ -78,7 +78,7 @@ function ProfileInfoCard({ title, description, info, social }) {
       </MDBox>
       <MDBox p={2}>
         <MDBox mb={2} lineHeight={1}>
-          <MDTypography variant="button" color="text" fontWeight="light">
+          <MDTypography variant="button" color="black" fontWeight="regular">
             {description}
           </MDTypography>
         </MDBox>

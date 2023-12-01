@@ -42,23 +42,22 @@ function Overview() {
   const { columns, rows } = data();
   return (
     <DashboardLayout>
-      <MDBox mb={1} />
+      <MDBox mb={2} />
       <Header>         
         <MDBox mt={5} mb={3}>
             <Grid item xs={12} md={6} xl={9} sx={{ display: "flex" }}>
+            <Divider orientation="vertical" sx={{ ml: -2, mr: 1 }} />
               <ProfileInfoCard
-                title="Professional Profile"
+                title="Perfil Profesional"
                 description=
-                "I consider myself a persevering, proactive, dedicated and responsible person. I am dedicated to backend development in Guidewire software that is used by banking and insurance companies however I am always open to using other more modern technologies to keep myself constantly learning. What I expect from the company that wants to contact me are constant challenges a pleasant work environment and continuous learning."
-                //"Me considero una persona perseverante, proactiva, dedicada y responsable. 
-                //Me dedico al desarrollo backend en el software Guidewire que es usado por empresas de banca y seguros, sin embargo siempre estoy abierta a usar otras tecnologías más modernas para mantenerme en constante aprendizaje. 
-                //Lo que espero de la empresa que me quiera contactar son retos constantes, ambiente laboral agradable y aprendizaje continuo."
+                //"I consider myself a persevering, proactive, dedicated and responsible person. I am dedicated to backend development in Guidewire software that is used by banking and insurance companies however I am always open to using other more modern technologies to keep myself constantly learning. What I expect from the company that wants to contact me are constant challenges a pleasant work environment and continuous learning."
+                "Me considero una persona perseverante, proactiva, dedicada y responsable. Actualmente estoy enfocada en el desarrollo backend de Guidewire (software de empresas de banca y seguros) mediante el uso de lenguaje Java y Gosu, sin embargo siempre estoy predispuesta a usar tecnologías más modernas para mantenerme en constante aprendizaje. Lo que espero de la empresa que me quiera contactar son retos constantes, ambiente laboral agradable y aprendizaje continuo."
 
                 info={{
-                  fullName: "Carmen T. Salinas Zavala",
-                  Phone: "(+51) 932676612",
-                  email: "carmensalinaszavala@gmail.com",
-                  Location: "PE",
+                  Nombre: "Carmen Salinas Zavala",
+                  Celular: "(+51) 932676612",
+                  Correo: "csalinasz@icloud.com",
+                  Ubicación: "Remota",
                 }}
                 social={[
                   {
@@ -86,17 +85,14 @@ function Overview() {
                     color: "linkedin",
                   },
                   {
-                    link: "https://wa.me/+51932676612text=hola%20sale",
+                    link: "https://api.whatsapp.com/send/?phone=932676612&text=Buenas+estoy+interesado+en+su+perfil+para+el+puesto+de+...+&type=phone_number&app_absent=0",
                     icon: <WhatsAppIcon />,
                     color: "whatsapp",
                   },
                 ]}
               />
              
-            
-            <Grid item xs={12} md={6} xl={3}>
-                <PlatformSettings />
-            </Grid>
+
           </Grid>
           <DataTable
             table={{ columns, rows }}
@@ -108,7 +104,7 @@ function Overview() {
         </MDBox>
         <MDBox pt={2} px={2} lineHeight={1.25} sx={{backgroundColor: "transparent", boxShadow: "none"}}>
           <MDTypography variant="h6" fontWeight="medium">
-            Last Jobs
+            Últimos Proyectos
           </MDTypography>
         </MDBox>
         <MDBox p={2}>
@@ -121,11 +117,13 @@ function Overview() {
                 height="10"
                 label=""
                 title="Softtek"
-                description="Creation of microservices in spring boot to be consumed by an external web to Guidewire's PolicyCenter and BillingCenter.
-                Dana service integration for electronic policy migration, use of messaging queues and API creation.
-                Generation of reports in SQL servers at client's request.
-                Modifications to products within Guidewire at the customer's request.
-                Continuous work through agile methodology within squads and tribes."
+                description="Elaboración de especificaciones técnicas funcionales a nivel de interfaces y procesos de negocio e interoperabilidad con aplicaciones internas/externas (Cloud y On Premise)."
+                des2 = "Participación en reuniones con usuarios del negocio para el levantamiento de criterios de validación a nivel de negocio."
+                des3 = "Apoyo en documentación técnica de la arquitectura Implementada (Hexagonal, BFF, Bus de Eventos)."
+                des4 = "Coordinación con las áreas de gestión de proyectos, calidad de software, seguridad informática y producción para la puesta en marcha de los proyectos."
+                des5= "Creación de microservicios para Guidewire usando spring boot e integración de servicio Dana para migración de políticas electrónicas, uso de mensajes por eventos. "
+                des6 = "Desarrollo de software basado en un ambiente de integración continua (Jenkins, GitHub Actions)."
+                des7 = "Trabajo continuo bajo el marco ágil a nivel de squads y tribus."
                 action={{
                   type: "external",
                   route: "https://education.guidewire.com/lmt/xlr8login.login?site=guidewire",
@@ -140,15 +138,18 @@ function Overview() {
               <DefaultProjectCard 
                 image={homeDecor1}
                 title="Pappas Grill"
-                description="Support in the integration of the accounting system with the logistics system through scripts in JavaScript. 
-                Macro maintenance. Maintenance of SQL databases through the creation of queries. 
-                NoSQL database maintenance by creating crud paths in nodejs for mongoDB. 
-                Automated short tests using Selenium."
+                description = "Soporte en la integración del sistema contable con el sistema logístico usando JavaScript."
+                des2 = "Mantenimiento de macros."
+                des3 = "Mantenimiento de bases de datos NoSQL mediante la creación de API REST en nodejs para mongoDB."
+                des4 = "Pruebas cortas automatizadas utilizando Selenium."
+                des5 = "Mantenimiento de bases de datos SQL mediante la creación de queries."
+                des6= "Desarrollo de funcionalidades dentro de la web a solicitud de la empresas"
+                des7 = "Uso de herramientas de GCP para integración y despliegue de la web."
                 action={{
                   type: "external",
                   route: "https://admin.pappas.pe/login",
                   color: "warning",
-                  label: "Accounting Admin Web",
+                  label: "Admin Web Contable",
                 }}
               />
             </Grid>
@@ -159,7 +160,7 @@ function Overview() {
           <Grid item xs={12} md={6} xl={4}>
             <MDBox pt={2} px={1}>
               <MDTypography variant="h5" fontWeight="medium">
-                Experience
+                Experiencia
               </MDTypography>
               <MDBox mt={0} mb={1}>
                 <MDTypography variant="button" color="text" fontWeight="regular">
@@ -170,32 +171,32 @@ function Overview() {
                   <MDTypography variant="button" color="text" fontWeight="medium">
                     2024
                   </MDTypography>{" "}
-                  is waiting for you
+                  ...
                 </MDTypography>
               </MDBox>
               <TimelineItem
                 color="success"
                 icon="payment"
-                title="Software Engineer Jr - Softtek "
-                dateTime="Mar 2022 - Present"
+                title="Software Engineer - Softtek "
+                dateTime="Mar 2022 - Actualmente"
               />
               <TimelineItem
                 color="info"
                 icon="payment"
-                title="Software Developer Bg - Softtek"
-                dateTime="Dec 2021 - Mar 2023"
+                title="Software Developer - Softtek"
+                dateTime="Dic 2021 - Mar 2022"
               />
               <TimelineItem
                 color="warning"
                 icon="store"
-                title="System Assistant - Pappas Grill"
-                dateTime="Feb 2021 - Feb 2022"
+                title="Software Developer - Pappas Grill"
+                dateTime="Mar 2020 - Nov 2021"
               />
               <TimelineItem
                 color="primary"
                 icon="account_balance"
                 title="Accounting Analyst- Pappas Grill"
-                dateTime="Jan 2016 - Nov 2021"
+                dateTime="Ene 2016 - Nov 2021"
                 lastItem
               /> 
             </MDBox>
@@ -206,7 +207,7 @@ function Overview() {
             <MDBox pt={0} px={0}  sx={{ backgroundColor: "transparent",
             boxShadow: "none"}}> 
               <MDTypography variant="h5" fontWeight="medium">
-                  Certifications
+                  Certificaciones
               </MDTypography>
               <SectionCarousel />
             </MDBox>

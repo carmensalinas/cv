@@ -52,7 +52,7 @@ const outlined = {
 
   large: {
     minHeight: pxToRem(46),
-    padding: `${pxToRem(12)} ${pxToRem(64)}`,
+    padding: `${pxToRem(12)} ${pxToRem(24)}`,
     fontSize: size.sm,
 
     "& .material-icon, .material-icons-round, svg": {

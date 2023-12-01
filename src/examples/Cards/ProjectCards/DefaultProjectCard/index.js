@@ -15,7 +15,21 @@ import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
 import MDAvatar from "components/MDAvatar";
 
-function DefaultProjectCard({ image, label, title, description, action, authors }) {
+function DefaultProjectCard({
+  image,
+  label,
+  title,
+  description,
+  des2,
+  des3,
+  des4,
+  des5,
+  des6,
+  des7,
+  des8,
+  action,
+  authors,
+}) {
   const renderAuthors = authors.map(({ image: media, name }) => (
     <Tooltip key={name} title={name} placement="bottom">
       <MDAvatar
@@ -99,8 +113,16 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
           )}
         </MDBox>
         <MDBox mb={3} lineHeight={0}>
-          <MDTypography variant="button" fontWeight="light" color="text">
-            {description}
+          <MDTypography variant="button" fontWeight="regular" color="black">
+            <ul>
+              <li>{description}</li>
+              <li>{des2}</li>
+              <li>{des3}</li>
+              <li>{des4}</li>
+              <li>{des5}</li>
+              <li>{des6}</li>
+              <li>{des7}</li>
+            </ul>
           </MDTypography>
         </MDBox>
         <MDBox display="flex" justifyContent="space-between" alignItems="center">
@@ -145,6 +167,13 @@ DefaultProjectCard.propTypes = {
   label: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  des2: PropTypes.string.isRequired,
+  des3: PropTypes.string.isRequired,
+  des4: PropTypes.string.isRequired,
+  des5: PropTypes.string.isRequired,
+  des6: PropTypes.string.isRequired,
+  des7: PropTypes.string.isRequired,
+  des8: PropTypes.string.isRequired,
   action: PropTypes.shape({
     type: PropTypes.oneOf(["external", "internal"]),
     route: PropTypes.string.isRequired,

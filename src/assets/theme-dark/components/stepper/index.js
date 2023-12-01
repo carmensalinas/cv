@@ -30,7 +30,7 @@ const stepper = {
   styleOverrides: {
     root: {
       background: linearGradient(gradients.info.main, gradients.info.state),
-      padding: `${pxToRem(24)} 0 ${pxToRem(16)}`,
+      padding: `${pxToRem(2)} 0 ${pxToRem(3)}`,
       borderRadius: borderRadius.lg,
       boxShadow: colored.info,
 

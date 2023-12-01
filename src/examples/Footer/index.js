@@ -45,7 +45,7 @@ function Footer({ company, links }) {
         fontSize={size.sm}
         px={1.5}
       >
-        &copy; {new Date().getFullYear()}, made with
+        &copy; {new Date().getFullYear()}, hecho con
         <MDBox fontSize={size.md} color="text" mb={-0.5} mx={0.25}>
           <Icon color="inherit" fontSize="inherit">
             favorite
@@ -86,7 +86,7 @@ Footer.defaultProps = {
   company: { href: "https://www.linkedin.com/in/carmensalinas/", name: "Carmen Salinas" },
   // eslint-disable-next-line prettier/prettier
   links: [
-    { href: "https://www.linkedin.com/in/carmensalinas/", name: "Repositorio" },
+    { href: "https://github.com/carmensalinas/cv", name: "Repositorio" },
   ],
 };
 

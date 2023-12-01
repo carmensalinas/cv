@@ -174,8 +174,8 @@ function Configurator() {
                   palette: { white, dark, background },
                   transitions,
                 }) => ({
-                  width: "24px",
-                  height: "24px",
+                  width: "4px",
+                  height: "4px",
                   padding: 0,
                   border: `${borderWidth[1]} solid ${darkMode ? background.sidenav : white.main}`,
                   borderColor: () => {
