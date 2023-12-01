@@ -55,7 +55,7 @@ function Header({ children }) {
         display="flex"
         alignItems="center"
         position="relative"
-        minHeight="18.75rem"
+        minHeight="8.75rem"
         borderRadius="xl"
         sx={{
           backgroundImage: ({ functions: { rgba, linearGradient }, palette: { gradients } }) =>
@@ -64,7 +64,7 @@ function Header({ children }) {
               rgba(gradients.info.state, 0.2)
             )}, url(${backgroundImage})`,
           backgroundSize: "cover",
-          backgroundPosition: "80%",
+          backgroundPosition: "100%",
           overflow: "hidden",
         }}
       />

@@ -34,10 +34,6 @@ import routes from "routes";
 // Material Dashboard 2 React contexts
 import { useMaterialUIController, setOpenConfigurator } from "context";
 
-// Images
-import brandWhite from "assets/images/bg-profile.png";
-import brandDark from "assets/images/bg-profile.png";
-
 export default function App() {
   const [controller, dispatch] = useMaterialUIController();
   const {
