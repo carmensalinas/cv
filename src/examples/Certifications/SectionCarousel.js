@@ -81,10 +81,8 @@ function SectionCarousel() {
   };
   return (
     <>
-      <div className="section pt-o" id="carousel">
-        <Container>
-          <Row>
-            <Col className="ml-auto mr-auto" md="9">
+      <div className="section pt-o" id="carousel"sx={{ boxShadow : "none"}}>
+        <Container sx={{ boxShadow : "none"}}>
               <Card className="page-carousel">
                 <Carousel
                   activeIndex={activeIndex}
@@ -104,9 +102,12 @@ function SectionCarousel() {
                         key={item.src}
                       >
                         <img src={item.src} alt={item.altText} style={{
-                          width : "479px",
-                          height: "335px",
+                          width : "100%",
+                          height: "100%",
+                          maxWidth: "450px",
+                          maxHeight: "270px",
                           backgroundPosition: "center",
+                          content : "flex",
                         }} />
                          <CarouselCaption className="text-warning" captionHeader={item.caption} />
                       </CarouselItem>
@@ -139,10 +140,8 @@ function SectionCarousel() {
                   </a>
                 </Carousel>
               </Card>
-            </Col>
-          </Row>
         </Container>
-      </div>{" "}
+      </div>
     </>
   );
 }

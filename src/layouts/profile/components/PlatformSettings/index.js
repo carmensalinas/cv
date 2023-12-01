@@ -13,8 +13,8 @@ function PlatformSettings() {
   const [answersPost, setAnswersPost] = useState(false);
 
   return (
-    <Card sx={{ boxShadow: "none" }}>
-      <MDBox p={2}>
+    <Card sx={{ boxShadow: "none", display: "flex" }}>
+      <MDBox p={2} display="flex">
         <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           Settings [in progress]
         </MDTypography>

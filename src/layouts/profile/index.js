@@ -36,17 +36,16 @@ import Icon from "@mui/material/Icon";
 
 // Material Dashboard 2 React example components
 import TimelineItem from "examples/Timeline/TimelineItem";
+import { height } from "@mui/system";
 
 function Overview() {
   const { columns, rows } = data();
   return (
     <DashboardLayout>
-      <MDBox mb={2} />
+      <MDBox mb={1} />
       <Header>         
         <MDBox mt={5} mb={3}>
-          <Grid container spacing={1}>
             <Grid item xs={12} md={6} xl={9} sx={{ display: "flex" }}>
-              <Divider orientation="vertical" sx={{ ml: -2, mr: 1 }} />
               <ProfileInfoCard
                 title="Professional Profile"
                 description=
@@ -93,10 +92,10 @@ function Overview() {
                   },
                 ]}
               />
-              <Divider orientation="vertical" sx={{ mx: 0 }} />
-            </Grid>
+             
+            
             <Grid item xs={12} md={6} xl={3}>
-              <PlatformSettings />
+                <PlatformSettings />
             </Grid>
           </Grid>
           <DataTable
@@ -107,14 +106,16 @@ function Overview() {
             entriesPerPage={false}
           />
         </MDBox>
-        <MDBox pt={2} px={2} lineHeight={1.25}>
+        <MDBox pt={2} px={2} lineHeight={1.25} sx={{backgroundColor: "transparent", boxShadow: "none"}}>
           <MDTypography variant="h6" fontWeight="medium">
             Last Jobs
           </MDTypography>
         </MDBox>
         <MDBox p={2}>
-          <Grid container spacing={6}>
-            <Grid item xs={12} md={6} xl={4}>
+          <Grid container spacing={6} sx={{ backgroundColor: "transparent",
+            boxShadow: "none" }}>
+            <Grid item xs={12} md={8} xl={4} sx={{ backgroundColor: "transparent",
+            boxShadow: "none"}}> 
               <DefaultProjectCard
                 image={homeDecor3}
                 height="10"
@@ -133,8 +134,10 @@ function Overview() {
                 }}
               />
             </Grid>
-            <Grid item xs={12} md={6} xl={8}>
-              <DefaultProjectCard
+           
+            <Grid item xs={12} md={4} xl={4.5} sx={{ backgroundColor: "transparent",
+            boxShadow: "none"}}> 
+              <DefaultProjectCard 
                 image={homeDecor1}
                 title="Pappas Grill"
                 description="Support in the integration of the accounting system with the logistics system through scripts in JavaScript. 
@@ -198,8 +201,10 @@ function Overview() {
             </MDBox>
             
           </Grid>
-          <Grid item xs={12} md={6} xl={8} >
-            <MDBox pt={0} px={0} >
+          <Grid item xs={12} md={6} xl={4.5} sx={{ backgroundColor: "transparent",
+            boxShadow: "none"}}> 
+            <MDBox pt={0} px={0}  sx={{ backgroundColor: "transparent",
+            boxShadow: "none"}}> 
               <MDTypography variant="h5" fontWeight="medium">
                   Certifications
               </MDTypography>

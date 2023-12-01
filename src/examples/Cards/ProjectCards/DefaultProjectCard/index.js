@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // react-router-dom components
 import { Link } from "react-router-dom";
 
@@ -61,15 +46,26 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
         overflow: "visible",
       }}
     >
-      <MDBox position="relative" width="100.25%" shadow="xl" borderRadius="xl">
+      <MDBox
+        position="relative"
+        width="100%"
+        height="100%"
+        boxShadow="none"
+        shadow="xl"
+        borderRadius="xl"
+      >
         <CardMedia
           src={image}
           component="img"
           title={title}
           sx={{
-            maxWidth: "100%",
+            boxShadow: "none",
+            width: "100%",
+            height: "100%",
+            maxWidth: "450px",
+            maxHeight: "270px",
             margin: 0,
-            boxShadow: ({ boxShadows: { md } }) => md,
+            backgroundColor: "transparent",
             objectFit: "cover",
             objectPosition: "center",
           }}
