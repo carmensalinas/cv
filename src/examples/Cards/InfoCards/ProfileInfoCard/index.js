@@ -18,27 +18,13 @@ import MDTypography from "components/MDTypography";
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 
-function ProfileInfoCard({ title, description, info, social }) {
+function ProfileInfoCard({ title, description, info1, info2, info3, info4, social }) {
   const labels = [];
   const values = [];
   const { socialMediaColors } = colors;
   const { size } = typography;
 
   // Convert this form `objectKey` of the object key in to this `object key`
-  Object.keys(info).forEach((el) => {
-    if (el.match(/[A-Z\s]+/)) {
-      const uppercaseLetter = Array.from(el).find((i) => i.match(/[A-Z]+/));
-      const newElement = el.replace(uppercaseLetter, ` ${uppercaseLetter.toLowerCase()}`);
-
-      labels.push(newElement);
-    } else {
-      labels.push(el);
-    }
-  });
-
-  // Push the object values into the values array
-  Object.values(info).forEach((el) => values.push(el));
-
   // Render the card info items
   const renderItems = labels.map((label, key) => (
     <MDBox key={label} display="flex" py={1} pr={2}>
@@ -82,7 +68,21 @@ function ProfileInfoCard({ title, description, info, social }) {
             {description}
           </MDTypography>
         </MDBox>
-        <MDBox opacity={0.3}>
+        <MDBox opacity={0.9}>
+          <MDBox p={0}>
+            <MDBox mb={2} lineHeight={1}></MDBox>
+            <MDTypography variant="button" color="black" fontWeight="regular">
+              {info1}
+              <br></br>
+              {info2}
+              <br></br>
+              {info3}
+              <br></br>
+              {info4}
+            </MDTypography>
+          </MDBox>
+          <Divider />
+
           <Divider />
         </MDBox>
         <MDBox>
@@ -103,7 +103,10 @@ function ProfileInfoCard({ title, description, info, social }) {
 ProfileInfoCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  info: PropTypes.objectOf(PropTypes.string).isRequired,
+  info1: PropTypes.string.isRequired,
+  info2: PropTypes.string.isRequired,
+  info3: PropTypes.string.isRequired,
+  info4: PropTypes.string.isRequired,
   social: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 

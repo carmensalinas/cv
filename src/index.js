@@ -9,6 +9,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import "assets/plugins/nucleo/css/nucleo.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
+// import i18n (needs to be bundled ;))
+import "./i18n";
+
 const container = document.getElementById("app");
 const root = createRoot(container);
 
