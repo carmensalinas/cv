@@ -123,7 +123,7 @@ function Overview() {
                     color: "linkedin",
                   },
                   {
-                    link: "https://api.whatsapp.com/send/?phone=932676612&text=Buenas+estoy+interesado+en+su+perfil+para+el+puesto+de+...+&type=phone_number&app_absent=0",
+                    link: "https://api.whatsapp.com/send/?phone=978645087&text=Buenas+estoy+interesado+en+su+perfil+para+el+puesto+de+...+&type=phone_number&app_absent=0",
                     icon: <WhatsAppIcon />,
                     color: "whatsapp",
                   },
