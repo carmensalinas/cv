@@ -209,7 +209,7 @@ function Overview() {
                     </MDTypography>
                     &nbsp;
                     <MDTypography variant="button" color="text" fontWeight="medium">
-                      2024
+                      2025
                     </MDTypography>{" "}
                     ...
                   </MDTypography>
@@ -218,7 +218,7 @@ function Overview() {
                   color="success"
                   icon="payment"
                   title="Software Engineer - Softtek "
-                  dateTime="Mar 2022 - Actualmente" />
+                  dateTime="Mar 2022 - Dic 2024" />
                 <TimelineItem
                   color="info"
                   icon="payment"
