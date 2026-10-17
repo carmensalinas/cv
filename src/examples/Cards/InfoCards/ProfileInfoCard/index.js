@@ -16,13 +16,11 @@ import MDTypography from "components/MDTypography";
 
 // Material Dashboard 2 React base styles
 import colors from "assets/theme/base/colors";
-import typography from "assets/theme/base/typography";
 
 function ProfileInfoCard({ title, description, info1, info2, info3, info4, social, socialLabel }) {
   const labels = [];
   const values = [];
   const { socialMediaColors } = colors;
-  const { size } = typography;
 
   // Convert this form `objectKey` of the object key in to this `object key`
   // Render the card info items
@@ -46,11 +44,14 @@ function ProfileInfoCard({ title, description, info1, info2, info3, info4, socia
       href={link}
       target="_blank"
       rel="noreferrer"
-      fontSize={size.lg}
       color={socialMediaColors[color].main}
-      pr={1}
-      pl={0.5}
-      lineHeight={1}
+      // 44px touch target (Apple/Google guideline) around a 26px icon
+      display="inline-flex"
+      alignItems="center"
+      justifyContent="center"
+      width="44px"
+      height="44px"
+      sx={{ "& svg": { fontSize: "26px", width: "26px", height: "26px" } }}
     >
       {icon}
     </MDBox>
@@ -88,7 +89,7 @@ function ProfileInfoCard({ title, description, info1, info2, info3, info4, socia
         </MDBox>
         <MDBox>
           {renderItems}
-          <MDBox display="flex" py={1} pr={2}>
+          <MDBox display="flex" alignItems="center" flexWrap="wrap" py={1} pr={2}>
             <MDTypography variant="button" fontWeight="bold" textTransform="capitalize">
               {socialLabel}: &nbsp;
             </MDTypography>
