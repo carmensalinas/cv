@@ -8,6 +8,10 @@
     <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/apple-icon.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Carmen Salinas</title>
+    <meta name="description" content="Carmen Salinas Zavala – Senior Guidewire Specialist (PolicyCenter, BillingCenter, ClaimCenter). Configuration, Gosu, Java and solutions architecture for insurance. CV in English and Spanish." />
+    <meta property="og:title" content="Carmen Salinas – Senior Guidewire Specialist" />
+    <meta property="og:description" content="Guidewire configuration, Gosu, Java and solutions architecture for insurance. CV in English and Spanish." />
+    <meta property="og:type" content="profile" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -52,6 +56,25 @@
       crossorigin="anonymous"
     ></script>
     
+    <style>
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        .print-expand,
+        .print-expand .MuiCollapse-wrapper {
+          height: auto !important;
+          visibility: visible !important;
+        }
+        @page {
+          margin: 1cm;
+        }
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6H7RXNJ0V4"></script>

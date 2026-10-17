@@ -1,34 +1,250 @@
-{   "language": "[Español / Inglés]",
-    "title": "Perfil Profesional",
-    "description" : "Me considero una persona perseverante, proactiva, dedicada y responsable. Actualmente estoy enfocada en el desarrollo backend de Guidewire (software de empresas de banca y seguros) mediante el uso de lenguaje Java y Gosu, sin embargo siempre estoy predispuesta a usar tecnologías más modernas para mantenerme en constante aprendizaje. Lo que espero de la empresa que me quiera contactar son retos constantes, ambiente laboral agradable y aprendizaje continuo.",
-    "infoName" : "Nombre",
-    "infoPhone" : "Celular",
-    "infoEmail" : "Correo",
-    "infoLocation" : "Ubicación",
-    "name": "Carmen Salinas Zavala",
-    "phone": "(+51) 978645087",
-    "mail": "carmen12.salinas@gmail.com",
-    "location": "Remota",
-    "title2" : "Últimos Proyectos",
-    "job1": "Softtek",
-    "des1Job1" : "Elaboración de especificaciones técnicas funcionales a nivel de interfaces y procesos de negocio e interoperabilidad con aplicaciones internas/externas (Cloud y On Premise).",
-    "des1Job2":"Participación en reuniones con usuarios del negocio para el levantamiento de criterios de validación a nivel de negocio.",
-    "des1Job3":"Apoyo en documentación técnica de la arquitectura Implementada (Hexagonal, BFF, Bus de Eventos).",
-    "des1Job4":"Coordinación con las áreas de gestión de proyectos, calidad de software, seguridad informática y producción para la puesta en marcha de los proyectos.",
-    "des1Job5":"Creación de microservicios para Guidewire usando spring boot e integración de servicio Dana para migración de políticas electrónicas, uso de mensajes por eventos. ",
-    "des1Job6":"Desarrollo de software basado en un ambiente de integración continua (Jenkins, GitHub Actions).",
-    "des1Job7":"Trabajo continuo bajo el marco ágil a nivel de squads y tribus.",
-    "labelJob1" : "Validador de Certificado Guidewire",
-    "job2": "Pappas Grill",
-    "des2Job1" : "Soporte en la integración del sistema contable con el sistema logístico usando JavaScript.",
-    "des2Job2": "Mantenimiento de macros.",
-    "des2Job3": "Mantenimiento de bases de datos NoSQL mediante la creación de API REST en nodejs para mongoDB.",
-    "des2Job4": "Pruebas cortas automatizadas utilizando Selenium.",
-    "des2Job5": "Mantenimiento de bases de datos SQL mediante la creación de queries.",
-    "des2Job6": "Desarrollo de funcionalidades dentro de la web a solicitud de la empresas",
-    "des2Job7": "Uso de herramientas de GCP para integración y despliegue de la web.",
-    "labelJob2" : "Admin Web Contable",
-    "title3" : "Experiencia",
-    "title4" : "Certificaciones" 
-
+{
+  "language": "Idioma",
+  "title": "Perfil Profesional",
+  "description": "Especialista Guidewire Senior con más de 4 años en el sector seguros, incluido un año y medio como arquitecta de soluciones. Experiencia de punta a punta en PolicyCenter, BillingCenter y ClaimCenter: modelado de productos con APD, configuración (PCF, reglas de negocio y tarificación), integraciones event-driven y microservicios Java/Spring Boot sobre Azure. He liderado técnicamente squads y participado en el comité de arquitectura para la migración de un core asegurador, con foco en calidad, seguridad y observabilidad. Mi formación contable me permite entender a fondo el ciclo financiero de la póliza. Inglés intermedio (B1) y portugués básico.",
+  "infoName": "Nombre",
+  "infoPhone": "Celular",
+  "infoEmail": "Correo",
+  "infoLocation": "Ubicación",
+  "name": "Carmen Salinas Zavala",
+  "phone": "(+51) 978645087",
+  "mail": "carmen12.salinas@gmail.com",
+  "location": "Perú (remoto)",
+  "job1": "Softtek",
+  "job2": "Pappas Grill",
+  "title3": "Experiencia profesional",
+  "title4": "Certificaciones y cursos",
+  "job1Items": [
+    "Configuración y desarrollo en PolicyCenter, BillingCenter y ClaimCenter con Gosu y Java: PCF, reglas de negocio, typelists y extensiones.",
+    "Integraciones event-driven con eventos, colas de mensajería y procesamiento asíncrono, incluidos proveedores externos de siniestros vehiculares (Audatex) y documentos (Danna Connect).",
+    "Microservicios Spring Boot para transformación JSON–XML, contenerizados con Docker.",
+    "Procesos batch y cargas masivas con Workload y DataStage; consultas y corrección de datos en Oracle y SQL Server.",
+    "Resolución de incidencias productivas mediante análisis de logs, trazabilidad y limpieza de colas."
+  ],
+  "job2Items": [
+    "Integración del sistema contable con el sistema logístico usando JavaScript.",
+    "APIs REST en Node.js para MongoDB, mantenimiento de bases de datos SQL y pruebas automatizadas con Selenium.",
+    "Despliegue de la web en Google Cloud Platform."
+  ],
+  "headline": "Especialista Guidewire Senior | Configuración y Arquitectura",
+  "social": "Redes",
+  "skills": "Conocimientos",
+  "downloadCv": "Descargar CV (PDF)",
+  "pageTitle": "Carmen Salinas | CV",
+  "timeline": [
+    {
+      "title": "Configuradora Guidewire - Wigou",
+      "date": "Ago 2026 - Actualidad",
+      "job": "job3"
+    },
+    {
+      "title": "Arquitecta de Soluciones Guidewire - Soaint",
+      "date": "Ene 2025 - Jun 2026",
+      "job": "job0"
+    },
+    {
+      "title": "Desarrolladora Guidewire Senior - Softtek",
+      "date": "Dic 2021 - Dic 2024",
+      "job": "job1"
+    },
+    {
+      "title": "Software Developer - Pappas Grill",
+      "date": "Mar 2020 - Nov 2021",
+      "job": "job2",
+      "note": "En paralelo a la jefatura contable"
+    },
+    {
+      "title": "Jefa Contable - Corporación Pappas",
+      "date": "Ene 2016 - Nov 2021",
+      "job": "job4"
+    },
+    {
+      "title": "Asistente Contable - Corporación Pappas",
+      "date": "Jul 2013 - Dic 2015",
+      "job": "job5"
+    }
+  ],
+  "project": "Proyecto",
+  "tools": "Herramientas",
+  "job0": "Soaint Perú",
+  "job0Items": [
+    "Liderazgo técnico de los squads Guidewire: definición de soluciones y supervisión de su implementación.",
+    "Miembro del comité semanal de arquitectura que revisa y aprueba las propuestas del ecosistema Guidewire.",
+    "Diseño de integraciones y análisis de procesos de negocio para la migración a un nuevo core asegurador.",
+    "Arquitecturas de microservicios con Java 17+ y Spring Boot sobre Azure (Service Bus, Logic Apps, Data Factory, SQL Azure), con estrategias de observabilidad y monitoreo.",
+    "Seguridad y calidad: remediación de hallazgos DAST y de ethical hacking con el equipo de seguridad, contratos de API en SwaggerHub y control de código con SonarQube.",
+    "Resolución de casos críticos en producción en flujos end-to-end."
+  ],
+  "job0Tools": "Java 17+, Spring Boot, Azure, Gosu, SwaggerHub, Postman, SonarQube, DataStage, Draw.io",
+  "job1Tools": "PolicyCenter, BillingCenter, ClaimCenter, Gosu, Java, Spring Boot, Oracle, SQL Server, Jenkins, Git",
+  "job3": "Wigou",
+  "job3Items": [
+    "Levantamiento de requerimientos con negocio para un producto nuevo, modelado en Advanced Product Designer (APD) y generado en PolicyCenter.",
+    "Configuración del producto en Guidewire: coberturas, vistas PCF, reglas de tarificación y lógica en Gosu.",
+    "Ciclo completo de modelado a emisión del producto en menos de un mes."
+  ],
+  "job3Tools": "PolicyCenter, APD, Gosu, PCF, Rating",
+  "previousCertificate": "Certificado anterior",
+  "nextCertificate": "Certificado siguiente",
+  "madeWith": "hecho con",
+  "by": "por",
+  "sourceCode": "Repositorio",
+  "whatsappMessage": "Hola Carmen, vi tu CV y me interesa tu perfil para el puesto de ...",
+  "skillGroups": [
+    {
+      "name": "Guidewire",
+      "items": [
+        "PolicyCenter",
+        "BillingCenter",
+        "ClaimCenter",
+        "ContactManager",
+        "APD",
+        "Gosu",
+        "PCF",
+        "Reglas de negocio",
+        "Tarificación",
+        "Typelists",
+        "Colas de mensajería"
+      ]
+    },
+    {
+      "name": "Lenguajes y frameworks",
+      "items": [
+        "Java",
+        "Gosu",
+        "Spring Boot",
+        "PL/SQL",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Cloud e integraciones",
+      "items": [
+        "Azure",
+        "Azure Service Bus",
+        "Logic Apps",
+        "Data Factory",
+        "SQL Azure",
+        "APIs REST",
+        "SOAP",
+        "Docker",
+        "DataStage",
+        "Workload"
+      ]
+    },
+    {
+      "name": "Bases de datos",
+      "items": [
+        "Oracle",
+        "SQL Server"
+      ]
+    },
+    {
+      "name": "Calidad y seguridad",
+      "items": [
+        "Pruebas unitarias",
+        "SonarQube",
+        "Arquitectura limpia",
+        "OWASP",
+        "Remediación DAST"
+      ]
+    },
+    {
+      "name": "Herramientas y metodologías",
+      "items": [
+        "Git",
+        "GitHub",
+        "Jenkins",
+        "Bitbucket",
+        "Jira",
+        "Confluence",
+        "Postman",
+        "SoapUI",
+        "SwaggerHub",
+        "Scrum"
+      ]
+    },
+    {
+      "name": "Idiomas",
+      "items": [
+        "Español (nativo)",
+        "Inglés (B1)",
+        "Portugués (básico)"
+      ]
+    }
+  ],
+  "viewCredential": "Ver credencial",
+  "references": [
+    {
+      "name": "Johanna Cachique",
+      "role": "Chapter Guidewire PolicyCenter y BillingCenter",
+      "company": "Pacífico Seguros"
+    },
+    {
+      "name": "Luis Rojas",
+      "role": "Chapter Guidewire ClaimCenter",
+      "company": "Pacífico Seguros"
+    },
+    {
+      "name": "Félix Quezada",
+      "role": "Chapter Area Lead Core Generales",
+      "company": "Pacífico Seguros"
+    },
+    {
+      "name": "Julio Chacón",
+      "role": "Delivery Manager Perú",
+      "company": "Softtek"
+    },
+    {
+      "name": "Karem Aguirre",
+      "role": "Tech Lead",
+      "company": "Softtek"
+    }
+  ],
+  "referencesTitle": "Referencias",
+  "referencesNote": "Datos de contacto disponibles a solicitud.",
+  "certCertification": "Certificación",
+  "certTraining": "Programa de capacitación",
+  "showDetails": "Ver detalle",
+  "hideDetails": "Ocultar detalle",
+  "job4Items": [
+    "Liderazgo del equipo de asistentes contables y coordinación directa con gerencia para el seguimiento financiero y administrativo.",
+    "Elaboración y análisis de reportes financieros, control presupuestal y soporte en la toma de decisiones."
+  ],
+  "job5Items": [
+    "Registro de operaciones contables, conciliaciones bancarias y gestión de documentación financiera.",
+    "Control de cuentas corrientes, emisión de comprobantes y apoyo en reportes para la jefatura contable."
+  ],
+  "certCourse": "Curso",
+  "functionalTitle": "Experiencia funcional en Guidewire",
+  "functionalModules": [
+    {
+      "name": "PolicyCenter",
+      "items": [
+        "Requerimientos de suscripción y emisión de pólizas.",
+        "Integraciones con servicios externos: procesos masivos por agente y generación de documentos (Danna Connect).",
+        "Creación de ofertas y productos, y reglas de tarificación.",
+        "Emisiones y renovaciones masivas de pólizas por tramas.",
+        "Documentos de emisión y convenios de pago automatizados.",
+        "Renovaciones, reescrituras y cancelaciones de agentes."
+      ]
+    },
+    {
+      "name": "BillingCenter",
+      "items": [
+        "Planes de pago y administración de cuentas de primas.",
+        "Regularización de cuotas y ajustes en planes de cobro.",
+        "Cancelación de pólizas por falta de pago.",
+        "Flujos financieros del ciclo de tarificación y cobro."
+      ]
+    },
+    {
+      "name": "ClaimCenter",
+      "items": [
+        "Configuración de flujos y ciclo de vida de siniestros.",
+        "Reparación de vehículos con proveedores externos (Audatex).",
+        "Trazabilidad y atención de reclamos."
+      ]
+    }
+  ]
 }

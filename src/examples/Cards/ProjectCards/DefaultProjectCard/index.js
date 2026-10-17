@@ -15,21 +15,7 @@ import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
 import MDAvatar from "components/MDAvatar";
 
-function DefaultProjectCard({
-  image,
-  label,
-  title,
-  description,
-  des2,
-  des3,
-  des4,
-  des5,
-  des6,
-  des7,
-  des8,
-  action,
-  authors,
-}) {
+function DefaultProjectCard({ image, label, title, subtitle, items, tools, action, authors }) {
   const renderAuthors = authors.map(({ image: media, name }) => (
     <Tooltip key={name} title={name} placement="bottom">
       <MDAvatar
@@ -60,37 +46,44 @@ function DefaultProjectCard({
         overflow: "visible",
       }}
     >
-      <MDBox
-        position="relative"
-        width="100%"
-        height="100%"
-        boxShadow="none"
-        shadow="xl"
-        borderRadius="xl"
-      >
-        <CardMedia
-          src={image}
-          component="img"
-          title={title}
-          sx={{
-            boxShadow: "none",
-            width: "100%",
-            height: "100%",
-            maxWidth: "450px",
-            maxHeight: "270px",
-            margin: 0,
-            backgroundColor: "transparent",
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
-        />
-      </MDBox>
+      {image && (
+        <MDBox
+          position="relative"
+          width="100%"
+          height="100%"
+          boxShadow="none"
+          shadow="xl"
+          borderRadius="xl"
+        >
+          <CardMedia
+            src={image}
+            component="img"
+            title={title}
+            sx={{
+              boxShadow: "none",
+              width: "100%",
+              height: "100%",
+              maxWidth: "450px",
+              maxHeight: "270px",
+              margin: 0,
+              backgroundColor: "transparent",
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
+          />
+        </MDBox>
+      )}
       <MDBox mt={1} mx={0.5}>
         <MDTypography variant="button" fontWeight="regular" color="text" textTransform="capitalize">
           {label}
         </MDTypography>
         <MDBox mb={1}>
-          {action.type === "internal" ? (
+          {!action && (
+            <MDTypography variant="h5" textTransform="capitalize">
+              {title}
+            </MDTypography>
+          )}
+          {action && action.type === "internal" && (
             <MDTypography
               component={Link}
               to={action.route}
@@ -99,7 +92,8 @@ function DefaultProjectCard({
             >
               {title}
             </MDTypography>
-          ) : (
+          )}
+          {action && action.type !== "internal" && (
             <MDTypography
               component="a"
               href={action.route}
@@ -111,22 +105,28 @@ function DefaultProjectCard({
               {title}
             </MDTypography>
           )}
+          {subtitle && (
+            <MDTypography display="block" variant="button" fontWeight="medium" color="text">
+              {subtitle}
+            </MDTypography>
+          )}
         </MDBox>
         <MDBox mb={3} lineHeight={0}>
           <MDTypography variant="button" fontWeight="regular" color="black">
             <ul>
-              <li>{description}</li>
-              <li>{des2}</li>
-              <li>{des3}</li>
-              <li>{des4}</li>
-              <li>{des5}</li>
-              <li>{des6}</li>
-              <li>{des7}</li>
+              {items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
           </MDTypography>
+          {tools && (
+            <MDTypography display="block" variant="caption" color="text" lineHeight={1.5}>
+              {tools}
+            </MDTypography>
+          )}
         </MDBox>
         <MDBox display="flex" justifyContent="space-between" alignItems="center">
-          {action.type === "internal" ? (
+          {action && action.type === "internal" && (
             <MDButton
               component={Link}
               to={action.route}
@@ -136,7 +136,8 @@ function DefaultProjectCard({
             >
               {action.label}
             </MDButton>
-          ) : (
+          )}
+          {action && action.type !== "internal" && (
             <MDButton
               component="a"
               href={action.route}
@@ -158,22 +159,23 @@ function DefaultProjectCard({
 
 // Setting default values for the props of DefaultProjectCard
 DefaultProjectCard.defaultProps = {
+  image: "",
+  label: "",
+  subtitle: "",
+  items: [],
+  tools: "",
+  action: null,
   authors: [],
 };
 
 // Typechecking props for the DefaultProjectCard
 DefaultProjectCard.propTypes = {
-  image: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  label: PropTypes.string,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  des2: PropTypes.string.isRequired,
-  des3: PropTypes.string.isRequired,
-  des4: PropTypes.string.isRequired,
-  des5: PropTypes.string.isRequired,
-  des6: PropTypes.string.isRequired,
-  des7: PropTypes.string.isRequired,
-  des8: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+  items: PropTypes.arrayOf(PropTypes.string),
+  tools: PropTypes.string,
   action: PropTypes.shape({
     type: PropTypes.oneOf(["external", "internal"]),
     route: PropTypes.string.isRequired,
@@ -189,7 +191,7 @@ DefaultProjectCard.propTypes = {
       "white",
     ]).isRequired,
     label: PropTypes.string.isRequired,
-  }).isRequired,
+  }),
   authors: PropTypes.arrayOf(PropTypes.object),
 };
 

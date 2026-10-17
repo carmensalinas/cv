@@ -44,14 +44,14 @@ function TimelineItem({ color, icon, title, dateTime, description, lastItem }) {
         height="2rem"
         borderRadius="50%"
         position="absolute"
-        top="8%"
+        top="0.15rem"
         left="2px"
         zIndex={2}
         sx={{ fontSize: ({ typography: { size } }) => size.sm }}
       >
         <Icon fontSize="inherit">{icon}</Icon>
       </MDBox>
-      <MDBox ml={5.75} pt={description ? 0.7 : 0.5} lineHeight={0} maxWidth="30rem">
+      <MDBox ml={5.75} pt={description ? 0.7 : 0.5} lineHeight={0} maxWidth="48rem">
         <MDTypography variant="button" fontWeight="medium" color={isDark ? "white" : "dark"}>
           {title}
         </MDTypography>
@@ -60,12 +60,8 @@ function TimelineItem({ color, icon, title, dateTime, description, lastItem }) {
             {dateTime}
           </MDTypography>
         </MDBox>
-        <MDBox mt={2} mb={1.5}>
-          {description ? (
-            <MDTypography variant="button" color={isDark ? "white" : "dark"}>
-              {description}
-            </MDTypography>
-          ) : null}
+        <MDBox mt={description ? 0.5 : 2} mb={1.5}>
+          {description}
         </MDBox>
       </MDBox>
     </MDBox>
@@ -94,7 +90,7 @@ TimelineItem.propTypes = {
   icon: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   dateTime: PropTypes.string.isRequired,
-  description: PropTypes.string,
+  description: PropTypes.node,
   lastItem: PropTypes.bool,
 };
 

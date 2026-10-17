@@ -1,5 +1,6 @@
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
 // @mui material components
 import Link from "@mui/material/Link";
@@ -13,6 +14,7 @@ import MDTypography from "components/MDTypography";
 import typography from "assets/theme/base/typography";
 
 function Footer({ company, links }) {
+  const { t } = useTranslation();
   const { href, name } = company;
   const { size } = typography;
 
@@ -21,7 +23,7 @@ function Footer({ company, links }) {
       <MDBox key={link.name} component="li" px={2} lineHeight={1}>
         <Link href={link.href} target="_blank">
           <MDTypography variant="button" fontWeight="regular" color="text">
-            {link.name}
+            {t(link.name)}
           </MDTypography>
         </Link>
       </MDBox>
@@ -45,13 +47,13 @@ function Footer({ company, links }) {
         fontSize={size.sm}
         px={1.5}
       >
-        &copy; {new Date().getFullYear()}, hecho con
+        &copy; {new Date().getFullYear()}, {t("madeWith")}
         <MDBox fontSize={size.md} color="text" mb={-0.5} mx={0.25}>
           <Icon color="inherit" fontSize="inherit">
             favorite
           </Icon>
         </MDBox>
-        by
+        {t("by")}
         <Link href={href} target="_blank">
           <MDTypography variant="button" fontWeight="medium">
             &nbsp;{name} &nbsp;
@@ -86,7 +88,7 @@ Footer.defaultProps = {
   company: { href: "https://www.linkedin.com/in/carmensalinas/", name: "Carmen Salinas" },
   // eslint-disable-next-line prettier/prettier
   links: [
-    { href: "https://github.com/carmensalinas/cv", name: "Repositorio" },
+    { href: "https://github.com/carmensalinas/cv", name: "sourceCode" },
   ],
 };
 
