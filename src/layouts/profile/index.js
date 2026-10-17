@@ -26,9 +26,9 @@ import ExperienceDetails from "layouts/profile/components/ExperienceDetails";
 
 
 // Images
-import homeDecor1 from "assets/images/bg-pappas.jpeg";
-import homeDecor3 from "assets/images/bg-softtek.jpeg";
-import soaintPhoto from "assets/images/bg-soaint.jpeg";
+import homeDecor1 from "assets/images/bg-pappas.webp";
+import homeDecor3 from "assets/images/bg-softtek.webp";
+import soaintPhoto from "assets/images/bg-soaint.webp";
 
 // @mui material components
 import Icon from "@mui/material/Icon";
@@ -100,11 +100,13 @@ function Overview() {
                 social={[
                   {
                     link: "https://www.linkedin.com/in/carmensalinas/",
+                    label: "LinkedIn",
                     icon: <LinkedInIcon />,
                     color: "linkedin",
                   },
                   {
                     link: "https://github.com/carmensalinas",
+                    label: "GitHub",
                     icon: (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -119,10 +121,12 @@ function Overview() {
                   },
                   {
                     link: "https://t.me/carmensalinaszavala",
+                    label: "Telegram",
                     icon: <TelegramIcon />,
                     color: "linkedin",
                   },
                   {
+                    label: "WhatsApp",
                     link: `https://api.whatsapp.com/send/?phone=51978645087&text=${encodeURIComponent(t('whatsappMessage'))}`,
                     icon: <WhatsAppIcon />,
                     color: "whatsapp",

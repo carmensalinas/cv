@@ -38,9 +38,10 @@ function ProfileInfoCard({ title, description, info1, info2, info3, info4, socia
   ));
 
   // Render the card social media icons
-  const renderSocial = social.map(({ link, icon, color }) => (
+  const renderSocial = social.map(({ link, icon, color, label }) => (
     <MDBox
-      key={color}
+      key={label}
+      aria-label={label}
       component="a"
       href={link}
       target="_blank"
@@ -68,7 +69,7 @@ function ProfileInfoCard({ title, description, info1, info2, info3, info4, socia
             {description}
           </MDTypography>
         </MDBox>
-        <MDBox opacity={0.9}>
+        <MDBox>
           <MDBox p={0}>
             <MDBox mb={2} lineHeight={1}></MDBox>
             <MDTypography variant="button" color="black" fontWeight="regular">
