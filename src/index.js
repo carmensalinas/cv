@@ -5,6 +5,8 @@ import App from "App";
 
 // self-hosted fonts (Roboto and the round Material icons)
 import "assets/fonts.css";
+// compact layout used when printing or saving the CV as PDF
+import "assets/print.css";
 
 // Material Dashboard 2 React Context Provider
 import { MaterialUIControllerProvider } from "context";

@@ -25,10 +25,8 @@ import References from "layouts/profile/components/References";
 import ExperienceDetails from "layouts/profile/components/ExperienceDetails";
 
 
-// Images
-import homeDecor1 from "assets/images/bg-pappas.webp";
-import homeDecor3 from "assets/images/bg-softtek.webp";
-import soaintPhoto from "assets/images/bg-soaint.webp";
+// Data
+import jobDetails from "layouts/profile/data/jobs";
 
 // @mui material components
 import Icon from "@mui/material/Icon";
@@ -37,6 +35,9 @@ import Icon from "@mui/material/Icon";
 import TimelineItem from "examples/Timeline/TimelineItem";
 import LanguageSwitcher from "components/LanguageSwitcher";
 import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
+import { flushSync } from 'react-dom';
+import PrintResume from "layouts/profile/components/PrintResume";
 
 const timelineStyles = [
   { color: "info", icon: "tune" },
@@ -47,29 +48,32 @@ const timelineStyles = [
   { color: "dark", icon: "account_balance" },
 ];
 
-// photo, project and tools shown in each job's expandable details
-const jobDetails = {
-  job3: { project: "La Segunda (Argentina)", tools: true },
-  job0: { image: soaintPhoto, project: "Pacífico Seguros", tools: true },
-  job1: { image: homeDecor3, project: "Pacífico Seguros", tools: true },
-  // the parallel-role note takes the color of the head of accounting entry
-  job2: { image: homeDecor1, noteColor: "primary" },
-  job4: {},
-  job5: {},
-};
-
 function Overview() {
   const { t } = useTranslation("translation");
   const timeline = t("timeline", { returnObjects: true });
 
+  // the printable CV is only mounted while the browser prints (button or Ctrl+P)
+  const [printing, setPrinting] = useState(false);
+  useEffect(() => {
+    const before = () => flushSync(() => setPrinting(true));
+    const after = () => setPrinting(false);
+    window.addEventListener("beforeprint", before);
+    window.addEventListener("afterprint", after);
+    return () => {
+      window.removeEventListener("beforeprint", before);
+      window.removeEventListener("afterprint", after);
+    };
+  }, []);
+
   return (
     <>
     <LanguageSwitcher />
+    {printing && <PrintResume />}
           
 
 
 
-      <MDBox>
+      <MDBox className="no-print">
         
         <Header>
 

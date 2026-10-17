@@ -238,4 +238,7 @@ function SectionCarousel() {
   );
 }
 
+// also listed by name in the printable CV
+export { items as certificates };
+
 export default SectionCarousel;
