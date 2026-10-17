@@ -18,7 +18,7 @@ import MDTypography from "components/MDTypography";
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 
-function ProfileInfoCard({ title, description, info1, info2, info3, info4, social }) {
+function ProfileInfoCard({ title, description, info1, info2, info3, info4, social, socialLabel }) {
   const labels = [];
   const values = [];
   const { socialMediaColors } = colors;
@@ -89,7 +89,7 @@ function ProfileInfoCard({ title, description, info1, info2, info3, info4, socia
           {renderItems}
           <MDBox display="flex" py={1} pr={2}>
             <MDTypography variant="button" fontWeight="bold" textTransform="capitalize">
-              social: &nbsp;
+              {socialLabel}: &nbsp;
             </MDTypography>
             {renderSocial}
           </MDBox>
@@ -99,15 +99,20 @@ function ProfileInfoCard({ title, description, info1, info2, info3, info4, socia
   );
 }
 
+ProfileInfoCard.defaultProps = {
+  socialLabel: "social",
+};
+
 // Typechecking props for the ProfileInfoCard
 ProfileInfoCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   info1: PropTypes.string.isRequired,
   info2: PropTypes.string.isRequired,
-  info3: PropTypes.string.isRequired,
+  info3: PropTypes.node.isRequired,
   info4: PropTypes.string.isRequired,
   social: PropTypes.arrayOf(PropTypes.object).isRequired,
+  socialLabel: PropTypes.string,
 };
 
 export default ProfileInfoCard;

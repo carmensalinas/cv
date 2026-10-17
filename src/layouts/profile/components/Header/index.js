@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
 // @mui material components
 import Card from "@mui/material/Card";
@@ -24,6 +25,7 @@ import carmensalinas from "assets/images/carmen-salinas.jpeg";
 import backgroundImage from "assets/images/bg-profile.png";
 
 function Header({ children }) {
+  const { t } = useTranslation();
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
   const [tabValue, setTabValue] = useState(0);
 
@@ -87,7 +89,7 @@ function Header({ children }) {
                 Carmen Salinas
               </MDTypography>
               <MDTypography variant="button" color="text" fontWeight="regular">
-                Guidewire Specialist
+                {t("headline")}
               </MDTypography>
             </MDBox>
           </Grid>
