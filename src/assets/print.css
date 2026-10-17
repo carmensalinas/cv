@@ -1,0 +1,110 @@
+/* Printable CV (src/layouts/profile/components/PrintResume) */
+.print-resume {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm 14mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  .print-resume {
+    display: block;
+    color: #2b2b33;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 9pt;
+    line-height: 1.35;
+  }
+
+  .print-resume h1 {
+    margin: 0;
+    font-size: 18pt;
+    font-weight: 700;
+    color: #344767;
+  }
+
+  .print-resume .headline {
+    margin: 1mm 0 0;
+    font-size: 10.5pt;
+    font-weight: 500;
+    color: #9e5866;
+  }
+
+  .print-resume .contact {
+    margin: 1.5mm 0 0;
+    font-size: 8.5pt;
+    color: #555a6e;
+  }
+
+  .print-resume section {
+    margin-top: 3.5mm;
+  }
+
+  .print-resume h2 {
+    margin: 0 0 1.5mm;
+    padding-bottom: 0.8mm;
+    border-bottom: 0.6pt solid #d9a5a8;
+    font-size: 10pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #9e5866;
+  }
+
+  .print-resume p {
+    margin: 0;
+  }
+
+  .print-resume .line {
+    margin-bottom: 0.8mm;
+  }
+
+  .print-resume .job {
+    margin-bottom: 2.2mm;
+    break-inside: avoid;
+  }
+
+  .print-resume .job-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 4mm;
+    color: #344767;
+  }
+
+  .print-resume .job-head span {
+    white-space: nowrap;
+    color: #555a6e;
+  }
+
+  .print-resume .meta {
+    font-size: 8.3pt;
+    color: #686d84;
+  }
+
+  .print-resume ul {
+    margin: 0.6mm 0 0.6mm;
+    padding-left: 4.5mm;
+  }
+
+  .print-resume li {
+    margin-bottom: 0.3mm;
+  }
+
+  .print-resume .references {
+    columns: 2;
+    column-gap: 6mm;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .print-resume h2,
+  .print-resume .job-head {
+    break-after: avoid;
+  }
+}
