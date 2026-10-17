@@ -3,11 +3,11 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "App";
 
+// self-hosted fonts (Roboto and the round Material icons)
+import "assets/fonts.css";
+
 // Material Dashboard 2 React Context Provider
 import { MaterialUIControllerProvider } from "context";
-import "bootstrap/dist/css/bootstrap.css";
-import "assets/plugins/nucleo/css/nucleo.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 
 // import i18n (needs to be bundled ;))
 import "./i18n";

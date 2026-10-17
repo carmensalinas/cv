@@ -52,6 +52,7 @@ function ExperienceDetails({ id, color, image, alt, note, noteColor, project, it
               component="img"
               src={image}
               alt={alt}
+              loading="lazy"
               width="100%"
               maxWidth="420px"
               maxHeight="220px"

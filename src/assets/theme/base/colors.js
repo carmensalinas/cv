@@ -24,9 +24,10 @@ const colors = {
     default: "#f0f2f5",
   },
 
+  // a bit darker than the template grey so small text reaches 4.5:1 on white
   text: {
-    main: "#7b809a",
-    focus: "#7b809a",
+    main: "#686D84",
+    focus: "#686D84",
   },
 
   transparent: {

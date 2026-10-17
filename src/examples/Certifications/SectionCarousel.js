@@ -11,7 +11,7 @@ import MDTypography from "components/MDTypography";
 
 const items = [
   {
-    src: require("assets/images/certificados/policy.png"),
+    src: require("assets/images/certificados/policy.webp"),
     altText: "Guidewire PolicyCenter Specialist",
     typeKey: "certCertification",
   },
@@ -23,42 +23,42 @@ const items = [
     link: "https://www.credly.com/badges/5ad3e467-d2d5-4a14-8640-7f5e771ce3b1",
   },
   {
-    src: require("assets/images/certificados/azure cloud.png"),
+    src: require("assets/images/certificados/azure cloud.webp"),
     altText: "Azure Cloud Architect",
     typeKey: "certCourse",
   },
   {
-    src: require("assets/images/certificados/azure az104.png"),
+    src: require("assets/images/certificados/azure az104.webp"),
     altText: "Azure AZ-104",
     typeKey: "certTraining",
   },
   {
-    src: require("assets/images/certificados/azure az305.png"),
+    src: require("assets/images/certificados/azure az305.webp"),
     altText: "Azure AZ-305",
     typeKey: "certCourse",
   },
   {
-    src: require("assets/images/certificados/azure fundamentals.png"),
+    src: require("assets/images/certificados/azure fundamentals.webp"),
     altText: "Azure Fundamentals",
     typeKey: "certTraining",
   },
   {
-    src: require("assets/images/certificados/meta-data analytics.png"),
+    src: require("assets/images/certificados/meta-data analytics.webp"),
     altText: "Meta Data Analytics",
     typeKey: "certCourse",
   },
   {
-    src: require("assets/images/certificados/michigan-developing ar.png"),
+    src: require("assets/images/certificados/michigan-developing ar.webp"),
     altText: "Developing AR",
     typeKey: "certCourse",
   },
   {
-    src: require("assets/images/certificados/uc davis spark sql.png"),
+    src: require("assets/images/certificados/uc davis spark sql.webp"),
     altText: "Spark SQL",
     typeKey: "certCourse",
   },
   {
-    src: require("assets/images/certificados/uc davis sql.png"),
+    src: require("assets/images/certificados/uc davis sql.webp"),
     altText: "SQL",
     typeKey: "certCourse",
   },
@@ -128,6 +128,7 @@ function SectionCarousel() {
           <img
             src={current.src}
             alt={current.altText}
+            loading="lazy"
             style={{ display: "block", width: "100%", maxHeight: "270px", objectFit: "contain" }}
           />
         ) : (
@@ -201,7 +202,7 @@ function SectionCarousel() {
         </MDTypography>
       </MDBox>
 
-      <MDBox display="flex" justifyContent="center" gap={0.75} mt={1}>
+      <MDBox display="flex" justifyContent="center" mt={0.5}>
         {items.map((item, index) => (
           <MDBox
             key={item.altText}
@@ -210,15 +211,25 @@ function SectionCarousel() {
             onClick={() => goTo(index)}
             aria-label={item.altText}
             aria-current={index === activeIndex}
+            // 24px touch target with a small visual dot inside
             sx={({ palette: { info, grey } }) => ({
-              width: index === activeIndex ? 20 : 8,
-              height: 8,
+              width: index === activeIndex ? 32 : 24,
+              height: 24,
               p: 0,
               border: 0,
-              borderRadius: 4,
               cursor: "pointer",
-              backgroundColor: index === activeIndex ? info.main : grey[400],
-              transition: "width 0.2s ease",
+              backgroundColor: "transparent",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              "&::before": {
+                content: '""',
+                width: index === activeIndex ? 20 : 8,
+                height: 8,
+                borderRadius: 4,
+                backgroundColor: index === activeIndex ? info.main : grey[400],
+                transition: "width 0.2s ease",
+              },
             })}
           />
         ))}

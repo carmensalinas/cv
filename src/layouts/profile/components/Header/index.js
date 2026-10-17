@@ -21,8 +21,8 @@ import MDAvatar from "components/MDAvatar";
 import breakpoints from "assets/theme/base/breakpoints";
 
 // Images
-import carmensalinas from "assets/images/carmen-salinas.jpeg";
-import backgroundImage from "assets/images/bg-profile.png";
+import carmensalinas from "assets/images/carmen-salinas.webp";
+import backgroundImage from "assets/images/bg-profile.webp";
 
 function Header({ children }) {
   const { t } = useTranslation();
@@ -85,7 +85,8 @@ function Header({ children }) {
           </Grid>
           <Grid item>
             <MDBox height="100%" mt={0.5} lineHeight={1}>
-              <MDTypography variant="h5" fontWeight="medium">
+              {/* h1 for search engines, same look as before */}
+              <MDTypography component="h1" variant="h5" fontWeight="medium">
                 Carmen Salinas
               </MDTypography>
               <MDTypography variant="button" color="text" fontWeight="regular">

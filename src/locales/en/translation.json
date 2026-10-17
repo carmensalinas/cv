@@ -30,7 +30,7 @@
   "social": "Social",
   "skills": "Skills",
   "downloadCv": "Download CV (PDF)",
-  "pageTitle": "Carmen Salinas | Resume",
+  "pageTitle": "Carmen Salinas Zavala | Senior Guidewire Specialist",
   "timeline": [
     {
       "title": "Guidewire Configuration Developer - Wigou",
@@ -246,5 +246,7 @@
         "Claim tracking and handling."
       ]
     }
-  ]
+  ],
+  "metaDescription": "Resume of Carmen Salinas Zavala, Senior Guidewire Specialist: PolicyCenter, BillingCenter and ClaimCenter, configuration, Gosu, Java and solutions architecture for insurance.",
+  "ogLocale": "en_US"
 }

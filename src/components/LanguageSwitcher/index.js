@@ -1,5 +1,6 @@
 // react-i18next
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 // @mui material components
 import ToggleButton from "@mui/material/ToggleButton";
@@ -18,11 +19,14 @@ const languages = [
 
 function LanguageSwitcher() {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const current = i18n.resolvedLanguage || "en";
 
   const handleChange = (event, lng) => {
     // ToggleButtonGroup sends null when the active button is clicked again
-    if (lng) i18n.changeLanguage(lng);
+    if (!lng) return;
+    i18n.changeLanguage(lng);
+    navigate(`/${lng}`);
   };
 
   return (

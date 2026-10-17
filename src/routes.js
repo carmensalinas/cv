@@ -10,7 +10,18 @@ const routes = [
     name: "Profile",
     key: "profile",
     icon: <Icon fontSize="small">person</Icon>,
-    route: "/profile",
+    route: "/",
+    component: <Profile />,
+  },
+  // one address per language, so search engines index both versions
+  {
+    key: "profile-es",
+    route: "/es",
+    component: <Profile />,
+  },
+  {
+    key: "profile-en",
+    route: "/en",
     component: <Profile />,
   },
 ];

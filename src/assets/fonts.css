@@ -1,0 +1,36 @@
+/*
+ * Fonts served from the site itself instead of Google Fonts, so the first
+ * paint does not wait on two extra servers.
+ */
+@import "~@fontsource/roboto/latin-300.css";
+@import "~@fontsource/roboto/latin-400.css";
+@import "~@fontsource/roboto/latin-500.css";
+@import "~@fontsource/roboto/latin-700.css";
+
+/* the theme renders icons with the "material-icons-round" class (see theme/components/icon.js) */
+@font-face {
+  font-family: "Material Icons Round";
+  font-style: normal;
+  font-weight: 400;
+  /* block: hide the icon names briefly instead of showing words like "expand_more" */
+  font-display: block;
+  src: url("~@fontsource/material-icons-round/files/material-icons-round-latin-400-normal.woff2")
+    format("woff2");
+}
+
+.material-icons-round {
+  font-family: "Material Icons Round";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+}

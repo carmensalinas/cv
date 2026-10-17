@@ -19,6 +19,8 @@ jobs:
       - run: npm run build
         env:
           GENERATE_SOURCEMAP: false
+          # Chrome preinstalled on the runner, used to prerender the pages
+          CHROME_PATH: /usr/bin/google-chrome
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}

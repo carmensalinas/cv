@@ -30,7 +30,7 @@
   "social": "Redes",
   "skills": "Conocimientos",
   "downloadCv": "Descargar CV (PDF)",
-  "pageTitle": "Carmen Salinas | CV",
+  "pageTitle": "Carmen Salinas Zavala | Especialista Guidewire Senior",
   "timeline": [
     {
       "title": "Configuradora Guidewire - Wigou",
@@ -246,5 +246,7 @@
         "Trazabilidad y atención de reclamos."
       ]
     }
-  ]
+  ],
+  "metaDescription": "CV de Carmen Salinas Zavala, Especialista Guidewire Senior: PolicyCenter, BillingCenter y ClaimCenter, configuración, Gosu, Java y arquitectura de soluciones para seguros.",
+  "ogLocale": "es_PE"
 }

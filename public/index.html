@@ -1,61 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#E8C3C0" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-icon.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Carmen Salinas</title>
-    <meta name="description" content="Carmen Salinas Zavala – Senior Guidewire Specialist (PolicyCenter, BillingCenter, ClaimCenter). Configuration, Gosu, Java and solutions architecture for insurance. CV in English and Spanish." />
-    <meta property="og:title" content="Carmen Salinas – Senior Guidewire Specialist" />
-    <meta property="og:description" content="Guidewire configuration, Gosu, Java and solutions architecture for insurance. CV in English and Spanish." />
+
+    <!-- title, description, canonical and og:* are updated per language in src/i18n.js -->
+    <title>Carmen Salinas Zavala | Especialista Guidewire Senior</title>
+    <meta
+      name="description"
+      content="CV de Carmen Salinas Zavala, Especialista Guidewire Senior: PolicyCenter, BillingCenter y ClaimCenter, configuración, Gosu, Java y arquitectura de soluciones para seguros."
+    />
+    <link rel="canonical" href="%REACT_APP_SITE_URL%/es" />
+    <link rel="alternate" hreflang="es" href="%REACT_APP_SITE_URL%/es" />
+    <link rel="alternate" hreflang="en" href="%REACT_APP_SITE_URL%/en" />
+    <link rel="alternate" hreflang="x-default" href="%REACT_APP_SITE_URL%/en" />
+
     <meta property="og:type" content="profile" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    <meta property="og:site_name" content="Carmen Salinas Zavala" />
+    <meta property="og:title" content="Carmen Salinas Zavala | Especialista Guidewire Senior" />
+    <meta
+      property="og:description"
+      content="Configuración Guidewire, Gosu, Java y arquitectura de soluciones para seguros."
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-      rel="stylesheet"
-    />
-    <!--     Fonts and icons     -->
-    <link
-    href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200"
-    rel="stylesheet"
-    />
-    <link
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
-    <!-- CSS Files -->
-    <link href="../src/assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../src/assets/css/paper-kit.css?v=1.3.0" rel="stylesheet" />
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="../src/assets/demo/demo.css?v=1.3.0" rel="stylesheet" />
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    
+    <meta property="og:url" content="%REACT_APP_SITE_URL%/es" />
+    <meta property="og:image" content="%REACT_APP_SITE_URL%/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="profile:first_name" content="Carmen" />
+    <meta property="profile:last_name" content="Salinas Zavala" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Carmen Salinas Zavala",
+        "alternateName": "Carmen Salinas",
+        "jobTitle": "Senior Guidewire Specialist",
+        "description": "Senior Guidewire specialist: PolicyCenter, BillingCenter and ClaimCenter configuration, Gosu, Java and solutions architecture for insurance.",
+        "url": "%REACT_APP_SITE_URL%/",
+        "image": "%REACT_APP_SITE_URL%/og-image.jpg",
+        "email": "mailto:carmen12.salinas@gmail.com",
+        "address": { "@type": "PostalAddress", "addressCountry": "PE" },
+        "knowsLanguage": ["es", "en", "pt"],
+        "knowsAbout": [
+          "Guidewire",
+          "Guidewire PolicyCenter",
+          "Guidewire BillingCenter",
+          "Guidewire ClaimCenter",
+          "Gosu",
+          "Java",
+          "Spring Boot",
+          "Microsoft Azure",
+          "Solutions architecture",
+          "Insurance"
+        ],
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Guidewire Certified Specialist - PolicyCenter Configuration"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/carmensalinas/",
+          "https://github.com/carmensalinas"
+        ]
+      }
+    </script>
+
     <style>
       @media print {
         .no-print {
@@ -75,16 +91,17 @@
         }
       }
     </style>
-  </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6H7RXNJ0V4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-6H7RXNJ0V4');
-  </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6H7RXNJ0V4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6H7RXNJ0V4');
+    </script>
+  </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="app"></div>

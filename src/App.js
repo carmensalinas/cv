@@ -77,6 +77,12 @@ export default function App() {
     document.body.setAttribute("dir", direction);
   }, [direction]);
 
+  // The prerendered HTML carries a copy of the CSS (see scripts/prerender.js).
+  // Once React has rendered and inserted its own styles, the copy is not needed.
+  useEffect(() => {
+    document.querySelectorAll("style[data-prerender]").forEach((style) => style.remove());
+  }, []);
+
   // Setting page scroll to 0 when changing the route
   useEffect(() => {
     document.documentElement.scrollTop = 0;
@@ -138,7 +144,7 @@ export default function App() {
       {layout === "vr" && <Configurator />} */}
       <Routes>
         {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/profile" />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </ThemeProvider>
   );
