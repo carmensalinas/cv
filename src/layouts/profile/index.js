@@ -88,7 +88,10 @@ function Overview() {
                 }
                 info3={
                   <>
-                    {t('infoEmail')}: <a href={`mailto:${t('mail')}`}>{t('mail')}</a>
+                    {t('infoEmail')}:{" "}
+                    <MDTypography component="a" href={`mailto:${t('mail')}`} variant="button" color="info">
+                      {t('mail')}
+                    </MDTypography>
                   </>
                 }
                 info4={

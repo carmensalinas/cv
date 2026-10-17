@@ -45,8 +45,8 @@ const colors = {
   },
 
   primary: {
-    main: "#e91e63",
-    focus: "#e91e63",
+    main: "#7E5E8C",
+    focus: "#6E507B",
   },
 
   secondary: {
@@ -54,24 +54,25 @@ const colors = {
     focus: "#8f93a9",
   },
 
+  // rose gold instead of the template blue (5.2:1 contrast on white)
   info: {
-    main: "#1A73E8",
-    focus: "#1662C4",
+    main: "#9E5866",
+    focus: "#8A4C59",
   },
 
   success: {
-    main: "#4CAF50",
-    focus: "#67bb6a",
+    main: "#5E7D66",
+    focus: "#506C58",
   },
 
   warning: {
-    main: "#fb8c00",
-    focus: "#fc9d26",
+    main: "#93683F",
+    focus: "#805A35",
   },
 
   error: {
-    main: "#F44335",
-    focus: "#f65f53",
+    main: "#A35F4F",
+    focus: "#8F5244",
   },
 
   light: {
@@ -98,8 +99,8 @@ const colors = {
 
   gradients: {
     primary: {
-      main: "#EC407A",
-      state: "#D81B60",
+      main: "#C3A9CF",
+      state: "#7E5E8C",
     },
 
     secondary: {
@@ -108,23 +109,23 @@ const colors = {
     },
 
     info: {
-      main: "#49a3f1",
-      state: "#1A73E8",
+      main: "#D9A5A8",
+      state: "#B76E79",
     },
 
     success: {
-      main: "#66BB6A",
-      state: "#43A047",
+      main: "#A9C2AE",
+      state: "#5E7D66",
     },
 
     warning: {
-      main: "#FFA726",
-      state: "#FB8C00",
+      main: "#DDBE9B",
+      state: "#93683F",
     },
 
     error: {
-      main: "#EF5350",
-      state: "#E53935",
+      main: "#E0AFA2",
+      state: "#A35F4F",
     },
 
     light: {
@@ -202,8 +203,8 @@ const colors = {
 
   badgeColors: {
     primary: {
-      background: "#f8b3ca",
-      text: "#cc084b",
+      background: "#EADFEE",
+      text: "#6E507B",
     },
 
     secondary: {
@@ -212,23 +213,23 @@ const colors = {
     },
 
     info: {
-      background: "#aecef7",
-      text: "#095bc6",
+      background: "#F2DCDB",
+      text: "#8A4C59",
     },
 
     success: {
-      background: "#bce2be",
-      text: "#339537",
+      background: "#DFE9E1",
+      text: "#506C58",
     },
 
     warning: {
-      background: "#ffd59f",
-      text: "#c87000",
+      background: "#F3E6D6",
+      text: "#805A35",
     },
 
     error: {
-      background: "#fcd3d0",
-      text: "#f61200",
+      background: "#F4E1DC",
+      text: "#8F5244",
     },
 
     light: {
